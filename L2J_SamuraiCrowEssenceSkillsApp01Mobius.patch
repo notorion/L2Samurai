@@ -1,0 +1,574 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius_Essence_10.1_SamuraiCrow
+diff --git dist/game/data/stats/skills/89100-89199.xml dist/game/data/stats/skills/89100-89199.xml
+index caf388c..e19105a 100644
+--- dist/game/data/stats/skills/89100-89199.xml
++++ dist/game/data/stats/skills/89100-89199.xml
+@@ -370,4 +370,6 @@
+ 		<icon>icon.s_crow_pursuit</icon>
+ 		<operateType>A1</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<castRange>400</castRange>
+ 		<coolTime>100</coolTime>
+@@ -394,4 +396,6 @@
+ 		<icon>icon.s_crow_pursuit</icon>
+ 		<operateType>A1</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<effectPoint>
+ 			<value level="1">-200</value>
+@@ -427,4 +431,6 @@
+ 	<skill id="89108" toLevel="1" name="Retaliation Scheme">
+ 		<operateType>A1</operateType>
++		<targetType>SELF</targetType>
++		<affectScope>SINGLE</affectScope>
+ 	</skill>
+ 	<skill id="89113" toLevel="6" name="Pursuit">
+@@ -502,4 +508,6 @@
+ 		<icon>icon.s_crow_pursuit</icon>
+ 		<operateType>A1</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<effectPoint>
+ 			<value level="1">-200</value>
+@@ -568,4 +576,5 @@
+ 		</abnormalLevel>
+ 		<abnormalTime>1200</abnormalTime>
++		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
+ 		<affectScope>SINGLE</affectScope>
+ 		<basicProperty>NONE</basicProperty>
+@@ -623,4 +632,5 @@
+ 		</abnormalLevel>
+ 		<abnormalTime>1200</abnormalTime>
++		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
+ 		<affectScope>SINGLE</affectScope>
+ 		<basicProperty>NONE</basicProperty>
+@@ -696,4 +706,5 @@
+ 		</abnormalLevel>
+ 		<abnormalTime>1200</abnormalTime>
++		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
+ 		<affectScope>SINGLE</affectScope>
+ 		<basicProperty>NONE</basicProperty>
+@@ -755,4 +766,5 @@
+ 		</abnormalLevel>
+ 		<abnormalTime>1200</abnormalTime>
++		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+ 		<affectScope>SINGLE</affectScope>
+ 		<basicProperty>NONE</basicProperty>
+@@ -926,4 +938,6 @@
+ 		<icon>icon.s_crow_slash</icon>
+ 		<operateType>A1</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<castRange>250</castRange>
+ 		<coolTime>250</coolTime>
+@@ -984,4 +998,53 @@
+ 		</mpConsume>
+ 		<reuseDelay>1000</reuseDelay>
++		<conditions>
++			<condition name="EquipWeapon">
++				<weaponType>
++					<item>SWORD</item>
++				</weaponType>
++			</condition>
++		</conditions>
++		<effects>
++			<effect name="PhysicalDamage">
++				<power>
++					<value level="1">400</value>
++					<value level="2">474</value>
++					<value level="3">562</value>
++					<value level="4">985</value>
++					<value level="5">1540</value>
++					<value level="6">2080</value>
++					<value level="7">3030</value>
++					<value level="8">4380</value>
++					<value level="9">4700</value>
++					<value level="10">5020</value>
++					<value level="11">5800</value>
++					<value level="12">6201</value>
++					<value level="13">6602</value>
++					<value level="14">7004</value>
++					<value level="15">7407</value>
++					<value level="16">7809</value>
++					<value level="17">8002</value>
++					<value level="18">8205</value>
++					<value level="19">8410</value>
++					<value level="20">8630</value>
++					<value level="21">8830</value>
++					<value level="22">9030</value>
++					<value level="23">9230</value>
++					<value level="24">9430</value>
++					<value level="25">9630</value>
++				</power>
++				<ignoreShieldDefence>true</ignoreShieldDefence>
++				<pDefMod>0.85</pDefMod>
++				<criticalChance>15</criticalChance>
++				<repeatCount>2</repeatCount>
++			</effect>
++			<effect name="TriggerSkillByDamageDealt">
++				<attackerType>Creature</attackerType>
++				<skillId>89171</skillId> <!-- Battojutsu -->
++				<skillLevel>1</skillLevel>
++				<chance>20</chance>
++				<targetType>SELF</targetType>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="89125" toLevel="12" name="Maneuver">
+@@ -1089,4 +1152,6 @@
+ 		<icon>icon.s_crow_dash</icon>
+ 		<operateType>A1</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<castRange>700</castRange>
+ 		<effectPoint>
+@@ -1178,4 +1243,10 @@
+ 			</condition>
+ 		</conditions>
++		<selfEffects>
++			<effect name="CallSkill">
++				<skillId>89200</skillId> <!-- Rush Jump -->
++				<skillLevel>1</skillLevel>
++			</effect>
++		</selfEffects>
+ 		<effects>
+ 			<effect name="PhysicalDamage">
+@@ -1203,4 +1274,6 @@
+ 		<icon>icon.s_crow_rush</icon>
+ 		<operateType>A1</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<castRange>700</castRange>
+ 		<effectPoint>
+@@ -1222,4 +1295,6 @@
+ 		<icon>icon.s_crow_rush</icon>
+ 		<operateType>A2</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<castRange>700</castRange>
+ 		<coolTime>200</coolTime>
+@@ -1254,8 +1329,44 @@
+ 		</mpConsume>
+ 		<reuseDelay>3000</reuseDelay>
++		<conditions>
++			<condition name="EquipWeapon">
++				<weaponType>
++					<item>SWORD</item>
++				</weaponType>
++			</condition>
++		</conditions>
++		<selfEffects>
++			<effect name="CallSkill">
++				<skillId>89133</skillId> <!-- Close Fight -->
++				<skillLevel>1</skillLevel>
++			</effect>
++		</selfEffects>
++		<effects>
++			<effect name="PhysicalDamage">
++				<power>
++					<value level="1">6200</value>
++					<value level="2">6600</value>
++					<value level="3">6940</value>
++					<value level="4">7600</value>
++					<value level="5">7900</value>
++					<value level="6">8300</value>
++					<value level="7">8500</value>
++					<value level="8">8700</value>
++					<value level="9">8900</value>
++					<value level="10">9100</value>
++					<value level="11">9300</value>
++					<value level="12">9500</value>
++				</power>
++				<ignoreShieldDefence>true</ignoreShieldDefence>
++				<pDefMod>0.9</pDefMod>
++				<criticalChance>15</criticalChance>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="89130" toLevel="12" name="Clever Maneuver">
+ 		<icon>icon.s_crow_rush</icon>
+ 		<operateType>A1</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<castRange>700</castRange>
+ 		<effectPoint>
+@@ -1277,4 +1388,6 @@
+ 		<icon>icon.s_crow_rush</icon>
+ 		<operateType>A2</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<castRange>700</castRange>
+ 		<coolTime>200</coolTime>
+@@ -1309,8 +1422,44 @@
+ 		</mpConsume>
+ 		<reuseDelay>3000</reuseDelay>
++		<conditions>
++			<condition name="EquipWeapon">
++				<weaponType>
++					<item>SWORD</item>
++				</weaponType>
++			</condition>
++		</conditions>
++		<selfEffects>
++			<effect name="CallSkill">
++				<skillId>89134</skillId> <!-- Furious Chase -->
++				<skillLevel>1</skillLevel>
++			</effect>
++		</selfEffects>
++		<effects>
++			<effect name="PhysicalDamage">
++				<power>
++					<value level="1">6200</value>
++					<value level="2">6600</value>
++					<value level="3">6940</value>
++					<value level="4">7600</value>
++					<value level="5">7900</value>
++					<value level="6">8300</value>
++					<value level="7">8500</value>
++					<value level="8">8700</value>
++					<value level="9">8900</value>
++					<value level="10">9100</value>
++					<value level="11">9300</value>
++					<value level="12">9500</value>
++				</power>
++				<ignoreShieldDefence>true</ignoreShieldDefence>
++				<pDefMod>0.9</pDefMod>
++				<criticalChance>15</criticalChance>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="89132" toLevel="12" name="Clever Maneuver">
+ 		<icon>icon.s_crow_rush</icon>
+ 		<operateType>A1</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<castRange>700</castRange>
+ 		<effectPoint>
+@@ -1330,12 +1479,54 @@
+ 	</skill>
+ 	<skill id="89133" toLevel="1" name="Close Fight">
+-		<!-- Atk. Spd. +90. Speed +30. Fist Weapon Resistance +5%. When hit, removes the following P./ M. Def.-decreasing debuffs. Removal rate: 30%. - Murder Attempt. - Hellfire. - Elemental Dust. - Claw Mark. - Piercing Claw. - Defense Crush. - Bone Prison. - Mass Armor Crush. - Armor Crush. - Shocking Burst -->
++		<!-- Atk. Spd. +90. Speed +30. Fist Weapon Resistance +10%. When hit, removes P./ M. Def.-decreasing debuffs. Removal rate: 50%. -->
+ 		<icon>icon.s_crow_rush</icon>
+-		<operateType>A1</operateType>
++		<operateType>A2</operateType>
++		<targetType>SELF</targetType>
++		<affectScope>SINGLE</affectScope>
++		<abnormalLevel>1</abnormalLevel>
++		<abnormalTime>4</abnormalTime>
++		<effects>
++			<effect name="PhysicalAttackSpeed">
++				<amount>90</amount>
++				<mode>DIFF</mode>
++			</effect>
++			<effect name="Speed">
++				<amount>30</amount>
++				<mode>DIFF</mode>
++			</effect>
++			<effect name="DefenceTrait">
++				<FIST>10</FIST>
++			</effect>
++			<effect name="TriggerSkillByDamageReceived">
++				<attackerType>Creature</attackerType>
++				<skillId>89158</skillId> <!-- Debuff removal -->
++				<skillLevel>1</skillLevel>
++				<chance>50</chance>
++				<targetType>SELF</targetType>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="89134" toLevel="1" name="Furious Chase">
+ 		<!-- Atk. Spd. +180. Speed +60. P. Accuracy +20 -->
+ 		<icon>icon.s_crow_rush</icon>
+-		<operateType>A1</operateType>
++		<operateType>A2</operateType>
++		<targetType>SELF</targetType>
++		<affectScope>SINGLE</affectScope>
++		<abnormalLevel>1</abnormalLevel>
++		<abnormalTime>4</abnormalTime>
++		<effects>
++			<effect name="PhysicalAttackSpeed">
++				<amount>180</amount>
++				<mode>DIFF</mode>
++			</effect>
++			<effect name="Speed">
++				<amount>60</amount>
++				<mode>DIFF</mode>
++			</effect>
++			<effect name="Accuracy">
++				<amount>20</amount>
++				<mode>DIFF</mode>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="89135" toLevel="1" name="Take Life">
+@@ -2210,6 +2401,26 @@
+ 	<skill id="89152" toLevel="4" name="Weapon Break">
+ 		<icon>icon.s_crow_shredding_weapon</icon>
+-		<operateType>A1</operateType>
++		<operateType>A2</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<abnormalLevel>
++			<value level="1">1</value>
++			<value level="2">2</value>
++			<value level="3">3</value>
++			<value level="4">4</value>
++		</abnormalLevel>
++		<abnormalTime>5</abnormalTime>
++		<abnormalType>DISARM</abnormalType>
++		<abnormalVisualEffect>DISARMORED</abnormalVisualEffect>
++		<basicProperty>NONE</basicProperty>
+ 		<effectPoint>-990</effectPoint>
++		<isDebuff>true</isDebuff>
++		<effects>
++			<effect name="Disarm" />
++			<effect name="PhysicalAttack">
++				<amount>-30</amount>
++				<mode>PER</mode>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="89154" toLevel="1" name="Fall to the Ground">
+@@ -2307,10 +2518,4 @@
+ 			</effect>
+ 		</effects>
+-		<pveEffects>
+-			<effect name="CallSkill">
+-				<skillId>89163</skillId> <!-- Monster Pull -->
+-				<skillLevel>1</skillLevel>
+-			</effect>
+-		</pveEffects>
+ 	</skill>
+ 	<skill id="89156" toLevel="4" name="Scratch">
+@@ -2329,4 +2534,6 @@
+ 		</abnormalLevel>
+ 		<abnormalTime>5</abnormalTime>
++		<abnormalType>ABSORB</abnormalType>
++		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+ 		<activateRate>80</activateRate>
+ 		<affectScope>SINGLE</affectScope>
+@@ -2342,8 +2549,27 @@
+ 		</magicLevel>
+ 		<trait>ANOMALY</trait>
++		<effects>
++			<effect name="VampiricDefence">
++				<amount>
++					<value level="1">-10</value>
++					<value level="2">-20</value>
++					<value level="3">-40</value>
++					<value level="4">-80</value>
++				</amount>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="89158" toLevel="1" name="Debuff removal">
+ 		<icon>icon.skill0003</icon>
+ 		<operateType>A1</operateType>
++		<targetType>SELF</targetType>
++		<affectScope>SINGLE</affectScope>
++		<effects>
++			<effect name="DispelByCategory">
++				<slot>DEBUFF</slot>
++				<rate>100</rate>
++				<max>1</max>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="89159" toLevel="4" name="Thousand Wounds">
+@@ -2501,4 +2727,5 @@
+ 		</abnormalLevel>
+ 		<abnormalTime>30</abnormalTime>
++		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
+ 		<abnormalVisualEffect>V_C_R_DETERMINATION_AVE</abnormalVisualEffect>
+ 		<affectScope>SINGLE</affectScope>
+@@ -2624,4 +2851,5 @@
+ 		</abnormalLevel>
+ 		<abnormalTime>1200</abnormalTime>
++		<abnormalType>PA_UP_SPECIAL</abnormalType>
+ 		<affectScope>SINGLE</affectScope>
+ 		<basicProperty>NONE</basicProperty>
+@@ -2886,4 +3114,10 @@
+ 		<staticReuse>true</staticReuse>
+ 		<effects>
++			<effect name="ReuseSkillById">
++				<skillId>89172</skillId> <!-- Perception: Battojutsu -->
++			</effect>
++			<effect name="ReuseSkillById">
++				<skillId>89171</skillId> <!-- Battojutsu -->
++			</effect>
+ 			<effect name="ResistAbnormalByCategory">
+ 				<amount>-40</amount>
+@@ -2991,5 +3225,5 @@
+ 		<!-- <font color="FF0000">Note!</font>. Can only be used while <font color="FFFFFF">Advent</font> is active. <Knockdown skill>. Attacks enemies thrice sending them airborne and then knocking down. Power 19,200. Crit. Atk. bonus ×3.0. Ignores Shield Defense. Ignores 25% of the target's defense. PvP: Attacks up to 20 targets. PvE: Attacks up to 20 targets. <font color="B39E7B">When using the skill,</font> triggers <font color="FFFFFF">Strength of Spirit</font> (duration: 3 sec.). Maneuver/ Clever Maneuver's range +400 -->
+ 		<icon>icon.s_drawing3</icon>
+-		<operateType>A1</operateType>
++		<operateType>DA6</operateType>
+ 		<targetType>ENEMY</targetType>
+ 		<affectHeight>-150;150</affectHeight>
+@@ -3036,5 +3270,5 @@
+ 			</effect>
+ 			<effect name="CallSkill">
+-				<skillId>89121</skillId> <!-- Airborne -->
++				<skillId>89154</skillId> <!-- Fall to the Ground -->
+ 				<skillLevel>1</skillLevel>
+ 			</effect>
+@@ -3044,4 +3278,6 @@
+ 		<icon>icon.skill0003</icon>
+ 		<operateType>A1</operateType>
++		<targetType>SELF</targetType>
++		<affectScope>SINGLE</affectScope>
+ 	</skill>
+ 	<skill id="89177" toLevel="4" name="Slashing of Strow Dummy">
+@@ -3893,5 +4129,6 @@
+ 	</skill>
+ 	<skill id="89196" toLevel="1" name="Samurai Standard Skills">
+-		<operateType>A2</operateType>
++		<icon>icon.skill0000</icon>
++		<operateType>P</operateType>
+ 	</skill>
+ 	<skill id="89197" toLevel="1" name="Disastrous Shriek - Link Display">
+@@ -3899,4 +4136,6 @@
+ 		<icon>icon.s_crow_reverse_strike</icon>
+ 		<operateType>A1</operateType>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<effectPoint>-1000</effectPoint>
+ 	</skill>
+diff --git dist/game/data/stats/skills/89200-89299.xml dist/game/data/stats/skills/89200-89299.xml
+index 8eedfd4..07ef719 100644
+--- dist/game/data/stats/skills/89200-89299.xml
++++ dist/game/data/stats/skills/89200-89299.xml
+@@ -94,4 +94,6 @@
+ 		</effectPoint>
+ 		<hitTime>800</hitTime>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<mpConsume>
+ 			<value level="1">10</value>
+@@ -121,4 +123,46 @@
+ 			<value level="25">62</value>
+ 		</mpConsume>
++		<conditions>
++			<condition name="EquipWeapon">
++				<weaponType>
++					<item>SWORD</item>
++				</weaponType>
++			</condition>
++		</conditions>
++		<effects>
++			<effect name="PhysicalDamage">
++				<power>
++					<value level="1">400</value>
++					<value level="2">474</value>
++					<value level="3">562</value>
++					<value level="4">985</value>
++					<value level="5">1540</value>
++					<value level="6">2080</value>
++					<value level="7">3030</value>
++					<value level="8">4380</value>
++					<value level="9">4700</value>
++					<value level="10">5020</value>
++					<value level="11">5800</value>
++					<value level="12">6201</value>
++					<value level="13">6602</value>
++					<value level="14">7004</value>
++					<value level="15">7407</value>
++					<value level="16">7809</value>
++					<value level="17">8002</value>
++					<value level="18">8205</value>
++					<value level="19">8410</value>
++					<value level="20">8630</value>
++					<value level="21">8830</value>
++					<value level="22">9030</value>
++					<value level="23">9230</value>
++					<value level="24">9430</value>
++					<value level="25">9630</value>
++				</power>
++				<ignoreShieldDefence>true</ignoreShieldDefence>
++				<pDefMod>0.85</pDefMod>
++				<criticalChance>15</criticalChance>
++				<repeatCount>2</repeatCount>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="89212" toLevel="25" name="Transcendent Battojutsu">
+@@ -180,4 +224,6 @@
+ 		</effectPoint>
+ 		<hitTime>800</hitTime>
++		<targetType>ENEMY</targetType>
++		<affectScope>SINGLE</affectScope>
+ 		<mpConsume>
+ 			<value level="1">10</value>
+@@ -207,4 +253,46 @@
+ 			<value level="25">62</value>
+ 		</mpConsume>
++		<conditions>
++			<condition name="EquipWeapon">
++				<weaponType>
++					<item>SWORD</item>
++				</weaponType>
++			</condition>
++		</conditions>
++		<effects>
++			<effect name="PhysicalDamage">
++				<power>
++					<value level="1">400</value>
++					<value level="2">474</value>
++					<value level="3">562</value>
++					<value level="4">985</value>
++					<value level="5">1540</value>
++					<value level="6">2080</value>
++					<value level="7">3030</value>
++					<value level="8">4380</value>
++					<value level="9">4700</value>
++					<value level="10">5020</value>
++					<value level="11">5800</value>
++					<value level="12">6201</value>
++					<value level="13">6602</value>
++					<value level="14">7004</value>
++					<value level="15">7407</value>
++					<value level="16">7809</value>
++					<value level="17">8002</value>
++					<value level="18">8205</value>
++					<value level="19">8410</value>
++					<value level="20">8630</value>
++					<value level="21">8830</value>
++					<value level="22">9030</value>
++					<value level="23">9230</value>
++					<value level="24">9430</value>
++					<value level="25">9630</value>
++				</power>
++				<ignoreShieldDefence>true</ignoreShieldDefence>
++				<pDefMod>0.85</pDefMod>
++				<criticalChance>15</criticalChance>
++				<repeatCount>2</repeatCount>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="89213" toLevel="3" name="Returned Life - Rate">
+@@ -230,7 +318,19 @@
+ 	</skill>
+ 	<skill id="89214" toLevel="1" name="Strength of Spirit">
+-		<!-- Maneuver/ Clever Maneuver's range +400 -->
++		<!-- Maneuver/ Clever Maneuver's range +400. Resets Maneuver/ Clever Maneuver cooldown. -->
+ 		<icon>icon.s_drawing2</icon>
+-		<operateType>A1</operateType>
++		<operateType>A2</operateType>
++		<targetType>SELF</targetType>
++		<affectScope>SINGLE</affectScope>
++		<abnormalLevel>1</abnormalLevel>
++		<abnormalTime>5</abnormalTime>
++		<effects>
++			<effect name="ReuseSkillById">
++				<skillId>89125</skillId> <!-- Maneuver -->
++			</effect>
++			<effect name="ReuseSkillById">
++				<skillId>89127</skillId> <!-- Clever Maneuver -->
++			</effect>
++		</effects>
+ 	</skill>
+ </list>
+\ No newline at end of file

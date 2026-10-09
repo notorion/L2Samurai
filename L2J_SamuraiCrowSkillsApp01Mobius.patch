@@ -1,0 +1,431 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius_14.1_SamuraiCrow
+diff --git dist/game/data/stats/players/skillTrees/Samurai/Samurai.xml dist/game/data/stats/players/skillTrees/Samurai/Samurai.xml
+index 6441cf3..5ec4ccd 100644
+--- dist/game/data/stats/players/skillTrees/Samurai/Samurai.xml
++++ dist/game/data/stats/players/skillTrees/Samurai/Samurai.xml
+@@ -9,10 +9,6 @@
+ 		<skill skillName="Maneuver" skillId="31536" skillLevel="6" getLevel="109" levelUpSp="181830" />
+ 		<skill skillName="Maneuver" skillId="31536" skillLevel="7" getLevel="112" levelUpSp="436393" />
+-		<skill skillName="Maneuver" skillId="31536" skillLevel="8" getLevel="115" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
+-		<skill skillName="Maneuver" skillId="31536" skillLevel="9" getLevel="119" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
++		<skill skillName="Maneuver" skillId="31536" skillLevel="8" getLevel="115" levelUpSp="436393" />
++		<skill skillName="Maneuver" skillId="31536" skillLevel="9" getLevel="119" levelUpSp="436393" />
+ 		<skill skillName="Take Life" skillId="31530" skillLevel="2" getLevel="85" />
+ 		<skill skillName="Take Life" skillId="31530" skillLevel="3" getLevel="100" levelUpSp="8809" />
+@@ -21,10 +17,6 @@
+ 		<skill skillName="Take Life" skillId="31530" skillLevel="6" getLevel="109" levelUpSp="181830" />
+ 		<skill skillName="Take Life" skillId="31530" skillLevel="7" getLevel="112" levelUpSp="436393" />
+-		<skill skillName="Take Life" skillId="31530" skillLevel="8" getLevel="115" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
+-		<skill skillName="Take Life" skillId="31530" skillLevel="9" getLevel="119" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
++		<skill skillName="Take Life" skillId="31530" skillLevel="8" getLevel="115" levelUpSp="436393" />
++		<skill skillName="Take Life" skillId="31530" skillLevel="9" getLevel="119" levelUpSp="436393" />
+ 		<skill skillName="Thousand Wounds" skillId="31531" skillLevel="2" getLevel="85" />
+ 		<skill skillName="Thousand Wounds" skillId="31531" skillLevel="3" getLevel="101" levelUpSp="21143" />
+@@ -33,57 +25,41 @@
+ 		<skill skillName="Thousand Wounds" skillId="31531" skillLevel="6" getLevel="110" levelUpSp="436393" />
+ 		<skill skillName="Thousand Wounds" skillId="31531" skillLevel="7" getLevel="113" levelUpSp="436393" />
+-		<skill skillName="Thousand Wounds" skillId="31531" skillLevel="8" getLevel="116" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
+-		<skill skillName="Thousand Wounds" skillId="31531" skillLevel="9" getLevel="120" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
++		<skill skillName="Thousand Wounds" skillId="31531" skillLevel="8" getLevel="116" levelUpSp="436393" />
++		<skill skillName="Thousand Wounds" skillId="31531" skillLevel="9" getLevel="120" levelUpSp="436393" />
+ 		<skill skillName="Full Twist" skillId="31532" skillLevel="1" getLevel="85" />
+ 		<skill skillName="Full Twist" skillId="31532" skillLevel="2" getLevel="108" levelUpSp="151525" />
+-		<skill skillName="Full Twist" skillId="31532" skillLevel="3" getLevel="114" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
+-		<skill skillName="Full Twist" skillId="31532" skillLevel="4" getLevel="120" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
++		<skill skillName="Full Twist" skillId="31532" skillLevel="3" getLevel="114" levelUpSp="436393" />
++		<skill skillName="Full Twist" skillId="31532" skillLevel="4" getLevel="120" levelUpSp="436393" />
+ 		<skill skillName="Walk in Monster Woods" skillId="31535" skillLevel="1" getLevel="85" />
+ 		<skill skillName="Walk in Monster Woods" skillId="31535" skillLevel="2" getLevel="108" levelUpSp="151525" />
+-		<skill skillName="Walk in Monster Woods" skillId="31535" skillLevel="3" getLevel="114" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
+-		<skill skillName="Walk in Monster Woods" skillId="31535" skillLevel="4" getLevel="120" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
++		<skill skillName="Walk in Monster Woods" skillId="31535" skillLevel="3" getLevel="114" levelUpSp="436393" />
++		<skill skillName="Walk in Monster Woods" skillId="31535" skillLevel="4" getLevel="120" levelUpSp="436393" />
+ 		<skill skillName="Pursuit" skillId="31537" skillLevel="1" getLevel="85" />
+ 		<skill skillName="Pursuit" skillId="31537" skillLevel="2" getLevel="105" levelUpSp="87688">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="8" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Pursuit" skillId="31537" skillLevel="3" getLevel="110" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="16" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Pursuit" skillId="31537" skillLevel="4" getLevel="115" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="32" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Pursuit" skillId="31537" skillLevel="5" getLevel="120" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="64" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Battojutsu" skillId="31538" skillLevel="1" getLevel="110" levelUpSp="436393">
+-			<item id="81453" count="1" /> <!-- Enhanced Rune Stone -->
++			<item id="81453" count="2" /> <!-- Enhanced Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Furinkazan" skillId="31539" skillLevel="2" getLevel="85" />
+ 		<skill skillName="Furinkazan" skillId="31539" skillLevel="3" getLevel="102" levelUpSp="25372" />
+ 		<skill skillName="Furinkazan" skillId="31539" skillLevel="4" getLevel="107" levelUpSp="126271" />
+-		<skill skillName="Furinkazan" skillId="31539" skillLevel="5" getLevel="112" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
+-		<skill skillName="Furinkazan" skillId="31539" skillLevel="6" getLevel="117" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
++		<skill skillName="Furinkazan" skillId="31539" skillLevel="5" getLevel="112" levelUpSp="436393" />
++		<skill skillName="Furinkazan" skillId="31539" skillLevel="6" getLevel="117" levelUpSp="436393" />
+ 		<skill skillName="Advent" skillId="31541" skillLevel="2" getLevel="85" />
+ 		<skill skillName="Advent" skillId="31541" skillLevel="3" getLevel="108" levelUpSp="151525">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="32" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Advent" skillId="31541" skillLevel="4" getLevel="118" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="64" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Determination" skillId="31540" skillLevel="1" getLevel="85" />
+@@ -91,24 +67,16 @@
+ 		<skill skillName="Determination" skillId="31540" skillLevel="3" getLevel="108" levelUpSp="151525" />
+ 		<skill skillName="Determination" skillId="31540" skillLevel="4" getLevel="113" levelUpSp="436393" />
+-		<skill skillName="Determination" skillId="31540" skillLevel="5" getLevel="116" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
+-		<skill skillName="Determination" skillId="31540" skillLevel="6" getLevel="120" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
++		<skill skillName="Determination" skillId="31540" skillLevel="5" getLevel="116" levelUpSp="436393" />
++		<skill skillName="Determination" skillId="31540" skillLevel="6" getLevel="120" levelUpSp="436393" />
+ 		<skill skillName="Adamant Will" skillId="31542" skillLevel="1" getLevel="85" />
+ 		<skill skillName="Adamant Will" skillId="31542" skillLevel="2" getLevel="102" levelUpSp="25372" />
+-		<skill skillName="Adamant Will" skillId="31542" skillLevel="3" getLevel="106" levelUpSp="105225">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
+-		<skill skillName="Adamant Will" skillId="31542" skillLevel="4" getLevel="110" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
+-		</skill>
++		<skill skillName="Adamant Will" skillId="31542" skillLevel="3" getLevel="106" levelUpSp="105225" />
++		<skill skillName="Adamant Will" skillId="31542" skillLevel="4" getLevel="110" levelUpSp="436393" />
+ 		<skill skillName="Atsumori" skillId="31543" skillLevel="1" getLevel="85" />
+ 		<skill skillName="Atsumori" skillId="31543" skillLevel="2" getLevel="110" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="16" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Atsumori" skillId="31543" skillLevel="3" getLevel="120" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="32" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Omen" skillId="31544" skillLevel="1" getLevel="110" levelUpSp="436393">
+@@ -137,26 +105,26 @@
+ 		</skill>
+ 		<skill skillName="Disastrous Shriek" skillId="31533" skillLevel="1" getLevel="85">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="8" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Disastrous Shriek" skillId="31533" skillLevel="2" getLevel="105" levelUpSp="87688">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="16" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Disastrous Shriek" skillId="31533" skillLevel="3" getLevel="111" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="32" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Disastrous Shriek" skillId="31533" skillLevel="4" getLevel="117" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="64" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Weapon Destruction" skillId="31534" skillLevel="1" getLevel="85">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="8" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Weapon Destruction" skillId="31534" skillLevel="2" getLevel="104" levelUpSp="36536">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="16" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Weapon Destruction" skillId="31534" skillLevel="3" getLevel="110" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="32" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Weapon Destruction" skillId="31534" skillLevel="4" getLevel="116" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="64" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Summon Kagami" skillId="31560" skillLevel="1" getLevel="85" autoGet="true" />
+@@ -230,11 +198,11 @@
+ 		<skill skillName="Heart of Sword" skillId="31528" skillLevel="1" getLevel="85" />
+ 		<skill skillName="Mental Preparation" skillId="31547" skillLevel="1" getLevel="105" levelUpSp="87688">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="16" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Mental Preparation" skillId="31547" skillLevel="2" getLevel="110" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="32" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Mental Preparation" skillId="31547" skillLevel="3" getLevel="120" levelUpSp="436393">
+-			<item id="81887,39738" count="1" /> <!-- Rune Stone -->
++			<item id="81887,39738" count="64" /> <!-- Rune Stone -->
+ 		</skill>
+ 		<skill skillName="Self-awareness" skillId="31529" skillLevel="1" getLevel="120" levelUpSp="436393">
+@@ -242,3 +210,3 @@
+ 		</skill>
+ 	</skillTree>
+-</list>
+\ No newline at end of file
++</list>
+diff --git dist/game/data/stats/skills/31500-31599.xml dist/game/data/stats/skills/31500-31599.xml
+index 24ffe7d..81fc11b 100644
+--- dist/game/data/stats/skills/31500-31599.xml
++++ dist/game/data/stats/skills/31500-31599.xml
+@@ -1851,4 +1851,5 @@
+ 		</abnormalLevel>
+ 		<abnormalTime>3</abnormalTime>
++		<abnormalType>CONFUSION</abnormalType>
+ 		<activateRate>
+ 			<value fromLevel="1" toLevel="4">60</value>
+@@ -1898,5 +1899,5 @@
+ 				<chance>100</chance>
+ 			</effect>
+-			<effect name="Untargetable" />
++			<effect name="DisableTargeting" />
+ 		</effects>
+ 	</skill>
+@@ -3290,15 +3291,42 @@
+ 		<!-- Marks the target for resetting the cooldown of Battojutsu. -->
+ 		<icon>icon.s_find_weakness</icon>
+-		<operateType>A1</operateType>
++		<operateType>A2</operateType>
++		<targetType>ENEMY_ONLY</targetType>
++		<abnormalTime>8</abnormalTime>
++		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
++		<affectScope>SINGLE</affectScope>
+ 		<effectPoint>-100</effectPoint>
+ 		<isDebuff>true</isDebuff>
+ 		<isMagic>4</isMagic>
++		<effects>
++			<effect name="PhysicalSkillCriticalRate">
++				<amount>20</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="DefencePhysicalSkillCriticalDamage">
++				<amount>15</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="TriggerSkillByDamageReceived">
++				<skillId>31549</skillId> <!-- Battojutsu Cooldown Reset -->
++				<skillLevel>1</skillLevel>
++				<targetType>TARGET</targetType>
++				<chance>100</chance>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="31549" toLevel="1" name="Battojutsu Cooldown Reset">
+-		<!-- Resets the cooldown of Battojutsu. // Not used. -->
++		<!-- Resets the cooldown of Battojutsu. -->
+ 		<icon>icon.s_find_weakness</icon>
+ 		<operateType>A1</operateType>
+-		<castRange>1500</castRange>
+-		<effectPoint>-100</effectPoint>
++		<targetType>SELF</targetType>
++		<affectScope>SINGLE</affectScope>
++		<effectPoint>80</effectPoint>
++		<isTriggeredSkill>true</isTriggeredSkill>
++		<effects>
++			<effect name="ReuseSkillById">
++				<skillId>31538</skillId> <!-- Battojutsu -->
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="31550" toLevel="1" name="Pole of Mental Power">
+@@ -3352,4 +3380,21 @@
+ 				<replacementSkillLevel>1</replacementSkillLevel>
+ 			</effect>
++			<effect name="ReplaceSkillBySkill" fromLevel="3" toLevel="4">
++				<existingSkillId>31538</existingSkillId> <!-- Battojutsu -->
++				<replacementSkillId>31558</replacementSkillId> <!-- Perception Lv. 3 -->
++				<replacementSkillLevel>1</replacementSkillLevel>
++			</effect>
++			<effect name="ReuseSkillById">
++				<skillId>31538</skillId> <!-- Battojutsu -->
++			</effect>
++			<effect name="ReuseSkillById">
++				<skillId>31552</skillId> <!-- Perception Lv. 1 -->
++			</effect>
++			<effect name="ReuseSkillById">
++				<skillId>31553</skillId> <!-- Perception Lv. 2 -->
++			</effect>
++			<effect name="ReuseSkillById">
++				<skillId>31558</skillId> <!-- Perception Lv. 3 -->
++			</effect>
+ 		</effects>
+ 	</skill>
+@@ -3547,5 +3592,37 @@
+ 			<value level="9">76</value>
+ 		</mpConsume>
+-		<reuseDelay>7000</reuseDelay>
++		<targetType>ENEMY</targetType>
++		<affectLimit>5-12</affectLimit>
++		<affectObject>NOT_FRIEND</affectObject>
++		<affectRange>200</affectRange>
++		<affectScope>RANGE</affectScope>
++		<conditions>
++			<condition name="EquipWeapon">
++				<weaponType>
++					<item>SWORD</item>
++				</weaponType>
++			</condition>
++		</conditions>
++		<effects>
++			<effect name="PhysicalDamage">
++				<pAtkMod>
++					<value level="1">1.2</value>
++					<value level="2">1.3</value>
++					<value level="3">1.4</value>
++					<value level="4">1.5</value>
++					<value level="5">1.6</value>
++					<value level="6">1.7</value>
++					<value level="7">1.8</value>
++					<value level="8">1.9</value>
++					<value level="9">2.0</value>
++				</pAtkMod>
++				<criticalChance>10</criticalChance>
++				<overHit>true</overHit>
++			</effect>
++			<effect name="DefenceCriticalRate">
++				<amount>-10</amount>
++				<mode>DIFF</mode>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="31556" toLevel="5" name="Strike">
+@@ -3557,4 +3634,7 @@
+ 		<icon>icon.s_crow_pursuit</icon>
+ 		<operateType>A1</operateType>
++		<targetType>ENEMY_ONLY</targetType>
++		<affectScope>SINGLE</affectScope>
++		<affectObject>NOT_FRIEND</affectObject>
+ 		<castRange>100</castRange>
+ 		<coolTime>500</coolTime>
+@@ -3562,4 +3642,6 @@
+ 		<hitTime>800</hitTime>
+ 		<isDebuff>true</isDebuff>
++		<itemConsumeCount>1</itemConsumeCount>
++		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
+ 		<mpConsume>
+ 			<value level="1">123</value>
+@@ -3570,4 +3652,27 @@
+ 		</mpConsume>
+ 		<reuseDelay>7000</reuseDelay>
++		<conditions>
++			<condition name="EquipWeapon">
++				<weaponType>
++					<item>SWORD</item>
++				</weaponType>
++			</condition>
++		</conditions>
++		<effects>
++			<effect name="PhysicalDamage">
++				<pAtkMod>
++					<value level="1">2.2</value>
++					<value level="2">2.4</value>
++					<value level="3">2.6</value>
++					<value level="4">2.8</value>
++					<value level="5">3.0</value>
++				</pAtkMod>
++				<criticalChance>10</criticalChance>
++				<overHit>true</overHit>
++			</effect>
++			<effect name="ReuseSkillById">
++				<skillId>31536</skillId> <!-- Maneuver -->
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="31557" toLevel="1" name="Maneuver Cooldown Reset">
+@@ -3588,10 +3693,31 @@
+ 		<!-- A true sword master directs the blade with their heart and not with their hand. A basic attack. Pierces the target and enemies in front of them and behind them, dealing damage equal to 500% of P. Atk. Requires a one-handed sword. Consumes 3 Soulstones. -->
+ 		<icon>icon.s_drawing2</icon>
+-		<operateType>A1</operateType>
++		<operateType>DA6</operateType>
++		<targetType>ENEMY</targetType>
++		<affectLimit>5-12</affectLimit>
++		<affectObject>NOT_FRIEND</affectObject>
++		<affectScope>SQUARE</affectScope>
+ 		<castRange>800</castRange>
+ 		<coolTime>500</coolTime>
+ 		<effectPoint>-669</effectPoint>
++		<effectRange>1400</effectRange>
++		<fanRange>75;0;1400;75</fanRange>
+ 		<hitTime>800</hitTime>
++		<itemConsumeCount>3</itemConsumeCount>
++		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
+ 		<mpConsume>139</mpConsume>
++		<conditions>
++			<condition name="EquipWeapon">
++				<weaponType>
++					<item>SWORD</item>
++				</weaponType>
++			</condition>
++		</conditions>
++		<effects>
++			<effect name="PhysicalDamage">
++				<pAtkMod>5.0</pAtkMod>
++				<criticalChance>10</criticalChance>
++			</effect>
++		</effects>
+ 	</skill>
+ 	<skill id="31559" toLevel="4" name="Activation - Advent">
+@@ -3694,4 +3820,5 @@
+ 		<reuseDelay>40000</reuseDelay>
+ 		<staticReuse>true</staticReuse>
++		<isTriggeredSkill>true</isTriggeredSkill>
+ 		<conditions>
+ 			<condition name="EquipWeapon">
+diff --git java/org/l2jmobius/gameserver/mechanics/skill/SkillCaster.java java/org/l2jmobius/gameserver/mechanics/skill/SkillCaster.java
+index 6bde4e6..5b4fc4f 100644
+--- java/org/l2jmobius/gameserver/mechanics/skill/SkillCaster.java
++++ java/org/l2jmobius/gameserver/mechanics/skill/SkillCaster.java
+@@ -1370,6 +1370,25 @@
+ 				else
+ 				{
+-					x = target.getX();
+-					y = target.getY();
++					final double dx = creature.getX() - target.getX();
++					final double dy = creature.getY() - target.getY();
++					final double distance = Math.hypot(dx, dy);
++					double offset = creature.getCollisionRadius();
++					if (target.isCreature())
++					{
++						offset += target.asCreature().getCollisionRadius();
++					}
++					offset += 10;
++					
++					if (distance > offset)
++					{
++						final double ratio = offset / distance;
++						x = target.getX() + (int) (dx * ratio);
++						y = target.getY() + (int) (dy * ratio);
++					}
++					else
++					{
++						x = creature.getX();
++						y = creature.getY();
++					}
+ 					z = target.getZ();
+ 				}
